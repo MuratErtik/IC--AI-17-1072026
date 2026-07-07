@@ -1,0 +1,36 @@
+Document 2: Does RAG Require Training the Model?
+
+A common misconception is that RAG involves retraining or fine-tuning 
+the underlying language model on the retrieved documents. In most 
+production RAG systems, this is not the case.
+
+Standard RAG Pipeline (no model training required):
+1. Documents are split into chunks and converted into vector embeddings 
+   using a pre-trained embedding model (e.g., text-embedding-3, 
+   sentence-transformers).
+2. These embeddings are stored in a vector database (e.g., Pinecone, 
+   Weaviate, FAISS, Chroma).
+3. At query time, the user's question is embedded using the same 
+   embedding model, and the most similar document chunks are retrieved 
+   via similarity search (e.g., cosine similarity).
+4. The retrieved chunks are inserted into the prompt as context, and 
+   the base language model (already pre-trained, used "as-is") generates 
+   an answer grounded in that context.
+
+This means the generative model itself (e.g., GPT, Gemini, Claude) is 
+NOT retrained for each new document set. Only the retrieval component 
+(embedding + indexing) is set up per knowledge base. This is what makes 
+RAG attractive for enterprises: new or updated documents can be added 
+to the vector database instantly, without the cost and delay of 
+retraining a large model.
+
+There is a distinct alternative approach called "fine-tuning," where 
+the model's weights ARE updated using new training data. Fine-tuning 
+is more expensive, slower to update, and risks catastrophic forgetting 
+of prior knowledge. RAG and fine-tuning are complementary, not 
+interchangeable — RAG is generally preferred when the underlying facts 
+change frequently or when data cannot be exposed during training due 
+to privacy/licensing constraints.
+
+Source: Internal technical training material, "Foundations of 
+Retrieval-Augmented Generation," Section 2: Architecture.

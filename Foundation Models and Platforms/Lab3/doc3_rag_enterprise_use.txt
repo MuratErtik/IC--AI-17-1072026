@@ -1,0 +1,30 @@
+Document 3: Why Enterprises Adopted RAG (2022-2024 Timeline)
+
+While RAG originated as an academic technique in 2020, its widespread 
+enterprise adoption is closely tied to the release of ChatGPT in 
+November 2022 and the subsequent explosion of enterprise interest in 
+deploying LLMs on internal company data.
+
+Timeline of enterprise-facing RAG tooling:
+- Early 2023: LangChain and LlamaIndex (then GPT Index) emerged as 
+  open-source frameworks that made it easy for developers to build 
+  RAG pipelines connecting LLMs to custom document stores.
+- Mid 2023: Major cloud providers began offering managed RAG services 
+  — for example, Azure AI Search with "Add your data" for Azure OpenAI, 
+  and Amazon Bedrock Knowledge Bases.
+- 2024: RAG became a standard architecture pattern for enterprise 
+  chatbots, internal knowledge assistants, and customer support tools, 
+  often combined with citation/source-attribution features so that 
+  responses could be traced back to specific source documents.
+
+Regarding source attribution: production RAG systems typically return 
+not just the generated answer but also metadata about which document 
+chunks were retrieved and used, allowing the system (or the user) to 
+verify claims against the original source. This directly addresses 
+the hallucination risk of ungrounded LLM responses, since answers can 
+be checked against retrievable, citable source material rather than 
+relying solely on the model's internal (and sometimes outdated or 
+incorrect) parametric knowledge.
+
+Source: Industry survey compilation, "State of Enterprise RAG 
+Adoption 2023-2024."
