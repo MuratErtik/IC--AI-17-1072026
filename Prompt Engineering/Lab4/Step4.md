@@ -1,0 +1,3 @@
+## Thoughts
+
+Aradaki en büyük fark, derinlik ile kapsam genişliği arasındaydı. A İstemi, herhangi bir önceliklendirme yapmaksızın her şeyi sıralayan yüzeysel bir özet izlenimi verirken; B İstemi, yapay zekayı yazmaya başlamadan önce konuyla ilgililik üzerine adım adım akıl yürütmeye zorladığı için hedefe yönelik ve kanıta dayalı bir çözüm sundu. Ancak bu durum, kapsamın daraltılması (Üretken Yapay Zeka kursunun elenmesi) pahasına gerçekleşti; bu da adım adım kontrolün, yalnızca ifadelerin nasıl kurulacağına değil, nelerin dahil edileceğine de açıkça karar vermemi gerektirdiğini gösterdi.
