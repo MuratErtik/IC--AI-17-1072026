@@ -1,0 +1,1 @@
+önceki oluşturduklarınla(3 bölüm + görseller) kullanarak tam bir HTML kişisel web sitesi oluşturmasını istiyorum. bu 3 bölüm belli olsun sitenin icinde 3 ana bolum gibi ve sitenin ana rengi acik mavi olsun
